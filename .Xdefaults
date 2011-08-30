@@ -1,0 +1,48 @@
+!
+! .Xdefaults - X configuration file
+!
+! Written by:
+! Joel Dahl <joel@vnode.se>
+!
+
+Xft.dpi:			96
+Xft.antialias:			true
+Xft.hinting:			full
+Xft.hintstyle:			hintslight
+Xft.rgba:			rgb
+
+xterm*internalBorder:		0
+xterm*loginShell:		true
+xterm*scrollBar:		false
+xterm*cursorBlink:		false
+xterm*vt100*geometry:		80x50
+xterm*saveLines:		8196
+xterm*dynamicColors:		true
+xterm*highlightSelection:	true
+xterm*boldMode:			false
+xterm*utf8:			2
+xterm*eightBitInput:		true
+xterm*charClass:		33:48,35-38:48,39:43,42-47:48,58-59:48,61:48,63-64:48,126:48
+xterm*font:			-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*
+xterm*boldFont:			-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*
+xterm*cursorColor:		#dcdccc
+
+xterm*background:		#000000
+xterm*foreground:		#ffffff
+
+xterm*color0:			#000000
+xterm*color1:			#ff6565
+xterm*color2:			#93d44f
+xterm*color3:			#eab93d
+xterm*color4:			#204a87
+xterm*color5:			#ce5c00
+xterm*color6:			#89b6e2
+xterm*color7:			#cccccc
+xterm*color8:			#555753
+xterm*color9:			#ff8d8d
+xterm*color10:			#c8e7a8
+xterm*color11:			#ffc123
+xterm*color12:			#3465a4
+xterm*color13:			#f57900
+xterm*color14:			#46a4ff
+xterm*color15:			#ffffff
