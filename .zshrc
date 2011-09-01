@@ -37,9 +37,6 @@ elif [ -x /usr/bin/vim ]; then
 	export EDITOR="/usr/bin/vim"
 fi
 
-# Pager
-export="more"
-
 # Better ls
 alias ls='ls -ahoGF'
 
