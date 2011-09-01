@@ -6,6 +6,6 @@ platforms) but they should probably work on Linux too.
 All color settings (vim themes, for example) have been developed with my
 .Xdefaults colors in mind, so if you're going to use any of these dotfiles
 make sure you also download the .Xdefaults file (at least if you want the
-color theme I originially intended).
+color theme I originally intended).
 
 As usual, use at your own risk and all that.  :-)
