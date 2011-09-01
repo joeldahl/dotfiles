@@ -1,3 +1,10 @@
+#
+# .zshrc - zsh configuration file
+#
+# Written by:
+# Joel Dahl <joel@vnode.se>
+#
+
 # Load colors support (for the prompt)
 autoload colors
 colors
