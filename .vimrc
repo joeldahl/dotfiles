@@ -88,3 +88,17 @@ map <xCSI>[62~ <MouseDown>
 " F11 to toggle paste mode
 map <F11> :set invpaste<CR>
 set pastetoggle=<F11>
+
+" Enable smarter paste mode when $TERM is xterm
+" Helps a lot with pasting in vim
+if &term =~ "xterm.*"
+	let &t_ti = &t_ti . "\e[?2004h"
+	let &t_te = "\e[?2004l" . &t_te
+	function XTermPasteBegin(ret)
+		set pastetoggle=<Esc>[201~
+		set paste
+		return a:ret
+	endfunction
+	map <expr> <Esc>[200~ XTermPasteBegin("i")
+	imap <expr> <Esc>[200~ XTermPasteBegin("")
+endif
