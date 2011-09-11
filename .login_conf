@@ -1,0 +1,8 @@
+#
+# .login_conf for FreeBSD
+#
+# Create db with "cap_mkdb .login_conf"
+#
+me:\
+	:charset=sv_SE.UTF-8:\
+	:lang=sv_SE.UTF-8:
