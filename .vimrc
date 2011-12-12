@@ -65,7 +65,7 @@ set nolist
 set listchars=tab:>-,trail:-
 
 " Automatically insert line breaks
-set textwidth=76
+set textwidth=78
 
 " Number of spaces that a <Tab> in the file counts for
 set tabstop=8
