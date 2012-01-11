@@ -5,56 +5,28 @@
 # Joel Dahl <joel@vnode.se>
 #
 
-# Path
-set path = (/sbin /bin /usr/sbin /usr/bin /usr/games /usr/local/sbin /usr/local/bin /usr/X11R6/bin $HOME/bin)
+set path = (/sbin /bin /usr/sbin /usr/bin /usr/games /usr/local/sbin /usr/local/bin $HOME/bin)
 
 if ($uid == 0) then
 	set user = root
 endif
 
 set prompt = "%n@%m [%~] "
+set color
+set filec
+set autolist
+set autoexpand
+set nobeep
+set rmstar
+set history = 300
+set savehist = (300 merge)
+set histdup = erase
 
-# Environment
 setenv PAGER more
 setenv LC_CTYPE sv_SE.UTF-8
-
-# Enable colorized output
-set color
-
-# BSD ls colors
 setenv LSCOLORS "Dxfxcxdxbxegedabagacad"
-
-# Linux ls colors (but tcsh also wants it for autocompletion colors)
 setenv LS_COLORS "di=01;33:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43:"
 
-# Automatic filename completion
-set filec
-
-# List autocomplete possibilies
-set autolist
-
-# No beeping
-set nobeep
-
-# History
-set history = 1000
-set savehist = 1000
-
-# Better ls
-alias ls ls -ahoGF
-
-# Set vim as default editor if it exists
-if ( -x /usr/local/bin/vim ) then
-	# FreeBSD default vim location
-	setenv EDITOR /usr/local/bin/vim
-	alias vi vim
-else if ( -x /usr/bin/vim ) then
-	# Mac OS X default vim location
-	setenv EDITOR /usr/bin/vim
-	alias vi vim
-endif
-
-# Manual pages with color
 setenv LESS_TERMCAP_mb `echotc md; echotc AF 1`
 setenv LESS_TERMCAP_md `echotc md; echotc AF 1`
 setenv LESS_TERMCAP_me `echotc me`
@@ -62,3 +34,22 @@ setenv LESS_TERMCAP_se `echotc me`
 setenv LESS_TERMCAP_so `echotc md; echotc AF 3; echotc AB 4`
 setenv LESS_TERMCAP_ue `echotc me`
 setenv LESS_TERMCAP_us `echotc md; echotc AF 4`
+
+alias h history
+alias ls ls -ahoGF
+
+if ( -X vim ) then
+	setenv EDITOR vim
+	alias vi vim
+endif
+
+bindkey "^R" i-search-back
+bindkey "^W" backward-delete-word
+bindkey -k up history-search-backward
+bindkey -k down history-search-forward
+
+complete man 'p/*/c/'
+complete pkg_{delete,info,version} 'n/-W/f/' 'n#-O#D:/usr/ports/#' 'C#*#D:/var/db/pkg/# #'
+complete portmaster 'n@*@`\ls -1 /var/db/pkg | sed "s%/var/db/pkg/%%;s%^\(.*\)-[0-9].*%\1%"`@'
+complete portsnap 'p/*/(fetch cron extract update)/'
+complete sysctl 'n/*/`sysctl -aN`/'
