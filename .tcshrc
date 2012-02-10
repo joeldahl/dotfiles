@@ -5,24 +5,46 @@
 # Joel Dahl <joel@vnode.se>
 #
 
+alias h history
+alias ls ls -ahoGF
+
+umask 22
+
 set path = (/sbin /bin /usr/sbin /usr/bin /usr/games /usr/local/sbin /usr/local/bin $HOME/bin)
 
 if ($uid == 0) then
 	set user = root
 endif
 
-set prompt = "%n@%m [%~] "
-set color
-set filec
-set autolist
-set autoexpand
-set nobeep
-set rmstar
-set history = 300
-set savehist = (300 merge)
-set histdup = erase
+if ($?prompt) then
+	# Interactive shell
+	set prompt = "%n@%m [%~] "
+	set color
+	set filec
+	set autolist
+	set autoexpand
+	set nobeep
+	set rmstar
+	set history = 500
+	set savehist = (500 merge)
+	set histdup = erase
+	if ($?tcsh) then
+		bindkey "^R" i-search-back
+		bindkey "^W" backward-delete-word
+		bindkey -k up history-search-backward
+		bindkey -k down history-search-forward
+	endif
+endif
 
-setenv PAGER more
+if ( -X vim ) then
+	setenv EDITOR vim
+	alias vi vim
+else
+	setenv EDITOR vi
+endif
+
+setenv PAGER less
+setenv BLOCKSIZE K
 setenv LC_CTYPE sv_SE.UTF-8
 setenv LSCOLORS "Dxfxcxdxbxegedabagacad"
 setenv LS_COLORS "di=01;33:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43:"
@@ -34,19 +56,6 @@ setenv LESS_TERMCAP_se `echotc me`
 setenv LESS_TERMCAP_so `echotc md; echotc AF 3; echotc AB 4`
 setenv LESS_TERMCAP_ue `echotc me`
 setenv LESS_TERMCAP_us `echotc md; echotc AF 4`
-
-alias h history
-alias ls ls -ahoGF
-
-if ( -X vim ) then
-	setenv EDITOR vim
-	alias vi vim
-endif
-
-bindkey "^R" i-search-back
-bindkey "^W" backward-delete-word
-bindkey -k up history-search-backward
-bindkey -k down history-search-forward
 
 complete man 'p/*/c/'
 complete pkg_{delete,info,version} 'n/-W/f/' 'n#-O#D:/usr/ports/#' 'C#*#D:/var/db/pkg/# #'
