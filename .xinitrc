@@ -1,3 +1,10 @@
+#
+# .xinitrc - xinit configuration file
+# 
+# Written by:
+# Joel Dahl <joel@vnode.se>
+#
+
 # Set Swedish keyboard layout and make CTRL-ALT-BACKSPACE work
 setxkbmap -option terminate:ctrl_alt_bksp -model pc105 -layout se &
 
