@@ -102,3 +102,6 @@ if &term =~ "xterm.*"
 	map <expr> <Esc>[200~ XTermPasteBegin("i")
 	imap <expr> <Esc>[200~ XTermPasteBegin("")
 endif
+
+" Different indentation for some common extensions
+autocmd FileType html,htm,css setlocal shiftwidth=2
