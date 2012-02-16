@@ -29,7 +29,6 @@ if ($?prompt) then
 	set savehist = (500 merge)
 	set histdup = erase
 	if ($?tcsh) then
-		bindkey "^R" i-search-back
 		bindkey "^W" backward-delete-word
 		bindkey -k up history-search-backward
 		bindkey -k down history-search-forward
