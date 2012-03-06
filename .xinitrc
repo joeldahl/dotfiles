@@ -12,4 +12,4 @@ setxkbmap -option terminate:ctrl_alt_bksp -model pc105 -layout se &
 xset b off &
 
 # Start Window Manager
-exec scrotwm
+exec spectrwm
