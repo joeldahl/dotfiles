@@ -8,6 +8,9 @@
 # Set Swedish keyboard layout and make CTRL-ALT-BACKSPACE work
 setxkbmap -option terminate:ctrl_alt_bksp -model pc105 -layout se &
 
+# Add terminus to Xorg's list of known font paths
+xset +fp /usr/local/lib/X11/fonts/terminus-font
+
 # Turn off console beep
 xset b off &
 
