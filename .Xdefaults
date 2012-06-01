@@ -5,23 +5,13 @@
 ! Joel Dahl <joel@vnode.se>
 !
 
-Xft.dpi:			96
-Xft.antialias:			true
-Xft.hinting:			full
-Xft.hintstyle:			hintslight
-Xft.rgba:			rgb
-
 xterm*internalBorder:		0
 xterm*loginShell:		true
-xterm*scrollBar:		false
-xterm*cursorBlink:		false
-xterm*vt100*geometry:		80x50
 xterm*saveLines:		8196
 xterm*dynamicColors:		true
 xterm*highlightSelection:	true
 xterm*boldMode:			false
 xterm*utf8:			2
-xterm*eightBitInput:		true
 xterm*charClass:		33:48,35-38:48,39:43,42-47:48,58-59:48,61:48,63-64:48,126:48
 xterm*font:			-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*
 xterm*boldFont:			-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*
