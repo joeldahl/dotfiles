@@ -17,7 +17,6 @@ if ($uid == 0) then
 endif
 
 if ($?prompt) then
-	# Interactive shell
 	set prompt = "%n@%m [%~] "
 	set color
 	set filec
@@ -25,8 +24,8 @@ if ($?prompt) then
 	set autoexpand
 	set nobeep
 	set rmstar
-	set history = 1000
-	set savehist = (1000 merge)
+	set history = 5000
+	set savehist = (5000 merge)
 	set histdup = erase
 	if ($?tcsh) then
 		bindkey "^W" backward-delete-word
@@ -48,16 +47,32 @@ setenv LC_CTYPE sv_SE.UTF-8
 setenv LSCOLORS "Dxfxcxdxbxegedabagacad"
 setenv LS_COLORS "di=01;33:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43:"
 
-setenv LESS_TERMCAP_mb `echotc md; echotc AF 1`
-setenv LESS_TERMCAP_md `echotc md; echotc AF 1`
-setenv LESS_TERMCAP_me `echotc me`
-setenv LESS_TERMCAP_se `echotc me`
-setenv LESS_TERMCAP_so `echotc md; echotc AF 3; echotc AB 4`
-setenv LESS_TERMCAP_ue `echotc me`
-setenv LESS_TERMCAP_us `echotc md; echotc AF 4`
+set UNAME = `uname`
+if ("$UNAME" == "Darwin") then
+	set mbAF = "1 1"
+	set mdAF = "1 1"
+	set soAF = "3 3"
+	set soAB = "4 4"
+	set usAF = "4 4"
+else if ("$UNAME" == "FreeBSD") then
+	set mbAF = "1"
+	set mdAF = "1"
+	set soAF = "3"
+	set soAB = "4"
+	set usAF = "4"
+	complete man 'p/*/c/'
+	complete pkg_{delete,info,version} 'n/-W/f/' 'n#-O#D:/usr/ports/#' 'C#*#D:/var/db/pkg/# #'
+	complete portmaster 'n@*@`\ls -1 /var/db/pkg | sed "s%/var/db/pkg/%%;s%^\(.*\)-[0-9].*%\1%"`@'
+	complete portsnap 'p/*/(fetch cron extract update)/'
+	complete sysctl 'n/*/`sysctl -aN`/'
+endif
 
-complete man 'p/*/c/'
-complete pkg_{delete,info,version} 'n/-W/f/' 'n#-O#D:/usr/ports/#' 'C#*#D:/var/db/pkg/# #'
-complete portmaster 'n@*@`\ls -1 /var/db/pkg | sed "s%/var/db/pkg/%%;s%^\(.*\)-[0-9].*%\1%"`@'
-complete portsnap 'p/*/(fetch cron extract update)/'
-complete sysctl 'n/*/`sysctl -aN`/'
+if ($?prompt) then
+	setenv LESS_TERMCAP_mb `echotc md; echotc AF $mbAF`
+	setenv LESS_TERMCAP_md `echotc md; echotc AF $mdAF`
+	setenv LESS_TERMCAP_me `echotc me`
+	setenv LESS_TERMCAP_se `echotc me`
+	setenv LESS_TERMCAP_so `echotc md; echotc AF $soAF; echotc AB $soAB`
+	setenv LESS_TERMCAP_ue `echotc me`
+	setenv LESS_TERMCAP_us `echotc md; echotc AF $usAF`
+endif
