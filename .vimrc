@@ -8,7 +8,7 @@
 " Theme
 colorscheme hacktop
 
-" Show the mode I'm in
+" Show the current mode
 set showmode
 
 " Show the command being typed
@@ -17,8 +17,8 @@ set showcmd
 " Always display the status line
 set laststatus=2
 
-" Adjust the contents of the status line a bit
-set statusline=%F\ %m%r%h%w\ (%{&ff})\ (%p%%)\ [Line:%l]\ [Col:%v]
+" Adjust the status line a bit
+set statusline=%F\ %m%r%h%w\ [%{&ff}]\ %y\ [line:%l/%L]\ [col:%v]
 
 " Detect type of file being edited
 filetype plugin indent on
@@ -44,7 +44,7 @@ set t_vb=
 set nobackup
 
 " Keep commands and search patterns in the history
-set history=100
+set history=1000
 
 " Allow backspace to delete
 set backspace=indent,eol,start
