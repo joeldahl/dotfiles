@@ -7,7 +7,7 @@
 
 " My old vim color theme. Save it here in case I ever want to use it again.
 " Looks really nice with my old Xdefaults colors.
-" Probably needs some cleaning...
+" I should probably tidy it up a bit someday...
 
 set background=dark
 hi clear
