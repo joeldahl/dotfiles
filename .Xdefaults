@@ -16,7 +16,7 @@ xterm*charClass:		33:48,35-38:48,39:43,42-47:48,58-59:48,61:48,63-64:48,126:48
 xterm*font:			-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*
 xterm*boldFont:			-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*
 
-! Use with my "hacktop" vim theme
+! solarz theme
 xterm*cursorColor:		#93a1a1
 xterm*background:		#002b36
 xterm*foreground:		#839496
@@ -37,7 +37,7 @@ xterm*color13:			#6c71c4
 xterm*color14:			#93a1a1
 xterm*color15:			#fdf6e3
 
-! Use with my "classic" vim theme 
+! hacktop theme
 !xterm*cursorColor:		#dcdccc
 !xterm*background:		#000000
 !xterm*foreground:		#ffffff
