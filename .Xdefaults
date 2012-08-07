@@ -18,7 +18,7 @@ xterm*boldFont:			-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*
 
 xterm*cursorColor:		#93a1a1
 xterm*background:		#002b36
-xterm*foreground:		#657b83
+xterm*foreground:		#839496
 xterm*color0:			#073642
 xterm*color1:			#dc322f
 xterm*color2:			#859900
