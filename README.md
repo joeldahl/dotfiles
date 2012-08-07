@@ -1,4 +1,4 @@
-# My collection of dotfiles.
+# My collection of dotfiles
 
 I prefer to work with text-based tools and I've spent quite a few hours
 creating a development environment that I feel comfortable with. These
