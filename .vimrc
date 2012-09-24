@@ -6,7 +6,7 @@
 "
 
 " Theme
-colorscheme solarz
+colorscheme hacktop
 
 " Show the current mode
 set showmode

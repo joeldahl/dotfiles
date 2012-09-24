@@ -12,59 +12,31 @@ if exists("syntax_on")
 endif
 let g:colors_name="hacktop"
 
-hi Boolean		ctermfg=yellow
-hi Character		ctermfg=yellow
-hi Comment		ctermfg=blue
-hi Conditional		ctermfg=darkcyan
-hi Constant		ctermfg=yellow
-hi Cursor		ctermfg=grey
-hi Debug		ctermfg=grey
-hi Define		ctermfg=darkred
-hi Delimiter		ctermfg=grey
-hi DiffAdd		ctermfg=grey
-hi DiffChange		ctermfg=grey
-hi DiffDelete		ctermfg=grey
-hi DiffText		ctermfg=grey
-hi Directory		ctermfg=grey
-hi ErrorMsg		ctermfg=grey
-hi Exception		ctermfg=darkcyan
-hi Float		ctermfg=yellow
-hi FoldColumn		ctermfg=grey
-hi Folded		ctermfg=grey
-hi Function		ctermfg=grey
-hi Identifier		ctermfg=grey
-hi Include		ctermfg=darkred
-hi IncSearch		ctermfg=grey
-hi Keyword		ctermfg=darkcyan
-hi Label		ctermfg=darkcyan
-hi LineNr		ctermfg=yellow
-hi Macro		ctermfg=darkred
-hi ModeMsg		ctermfg=grey
-hi MoreMsg		ctermfg=grey
-hi Number		ctermfg=yellow
-hi Operator		ctermfg=darkcyan
-hi PreCondit		ctermfg=darkred
-hi PreProc		ctermfg=darkred
-hi Question		ctermfg=grey
-hi Repeat		ctermfg=darkcyan
-hi Search		ctermfg=grey
-hi SpecialChar		ctermfg=grey
-hi SpecialComment	ctermfg=grey
-hi Special		ctermfg=grey
-hi SpecialKey		ctermfg=darkblue
-hi Statement		ctermfg=darkcyan
-hi StatusLine		ctermfg=grey
-hi StatusLineNC		ctermfg=grey
-hi StorageClass		ctermfg=darkgreen
-hi String		ctermfg=yellow
-hi Structure		ctermfg=darkgreen
-hi Tag			ctermfg=grey
-hi Title		ctermfg=grey
-hi Todo			ctermfg=grey
-hi Typedef		ctermfg=darkgreen
-hi Type			ctermfg=darkgreen
-hi Underlined		ctermfg=grey
-hi VertSplit		ctermfg=grey
-hi VisualNOS		ctermfg=grey
-hi WarningMsg		ctermfg=grey
-hi WildMenu		ctermfg=grey
+" See :help group-name
+hi Comment		ctermfg=10 ctermbg=NONE cterm=NONE
+hi Constant		ctermfg=6 ctermbg=NONE cterm=NONE
+hi Identifier		ctermfg=4 ctermbg=NONE cterm=NONE
+hi Statement		ctermfg=2 ctermbg=NONE cterm=NONE
+hi PreProc		ctermfg=9 ctermbg=NONE cterm=NONE
+hi Type			ctermfg=3 ctermbg=NONE cterm=NONE
+hi Special		ctermfg=1 ctermbg=NONE cterm=NONE
+hi Underlined		ctermfg=13 ctermbg=NONE cterm=NONE
+hi Ignore		ctermfg=NONE ctermbg=NONE cterm=NONE
+hi Error		ctermfg=1 ctermbg=NONE cterm=NONE
+hi Todo			ctermfg=5 ctermbg=NONE cterm=NONE
+
+" See :help highlight-groups
+hi Cursor		ctermfg=8 ctermbg=12 cterm=NONE
+hi CursorColumn		ctermfg=NONE ctermbg=0 cterm=NONE
+hi CursorLine		ctermfg=NONE ctermbg=0 cterm=NONE
+hi ErrorMsg		ctermfg=1 ctermbg=7 cterm=NONE
+hi IncSearch		ctermfg=9 ctermbg=7 cterm=NONE
+hi LineNr		ctermfg=10 ctermbg=0 cterm=NONE
+hi MatchParen		ctermfg=1 ctermbg=10 cterm=NONE
+hi NonText		ctermfg=10 ctermbg=NONE cterm=NONE
+hi Search		ctermfg=3 ctermbg=7 cterm=NONE
+hi SpecialKey		ctermfg=10 ctermbg=0 cterm=NONE
+hi StatusLine		ctermfg=14 ctermbg=0 cterm=NONE
+hi StatusLineNC		ctermfg=10 ctermbg=0 cterm=NONE
+hi VertSplit		ctermfg=8 ctermbg=NONE cterm=NONE
+hi Visual		ctermfg=0 ctermbg=10 cterm=NONE
