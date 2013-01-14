@@ -5,20 +5,16 @@
 ! Joel Dahl <joel@vnode.se>
 !
 
-xterm*internalBorder:		0
 xterm*loginShell:		true
 xterm*saveLines:		8196
 xterm*dynamicColors:		true
 xterm*highlightSelection:	true
-xterm*boldMode:			false
 xterm*utf8:			2
 xterm*charClass:		33:48,35-38:48,39:43,42-47:48,58-59:48,61:48,63-64:48,126:48
 xterm*font:			-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*
-xterm*boldFont:			-*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*
 
-! solarz theme
-xterm*cursorColor:		#93a1a1
-xterm*background:		#002b36
+xterm*cursorColor:		#839496
+xterm*background:		#001e26
 xterm*foreground:		#839496
 xterm*color0:			#073642
 xterm*color1:			#dc322f
@@ -28,32 +24,11 @@ xterm*color4:			#268bd2
 xterm*color5:			#d33682
 xterm*color6:			#2aa198
 xterm*color7:			#eee8d5
-xterm*color8:			#002b36
+xterm*color8:			#001e26
 xterm*color9:			#cb4b16
-xterm*color10:			#586e75
-xterm*color11:			#657b83
+xterm*color10:			#87a376
+xterm*color11:			#dcbe06
 xterm*color12:			#839496
 xterm*color13:			#6c71c4
-xterm*color14:			#93a1a1
+xterm*color14:			#586e75
 xterm*color15:			#fdf6e3
-
-! hacktop theme
-!xterm*cursorColor:		#dcdccc
-!xterm*background:		#000000
-!xterm*foreground:		#ffffff
-!xterm*color0:			#000000
-!xterm*color1:			#ff6565
-!xterm*color2:			#93d44f
-!xterm*color3:			#eab93d
-!xterm*color4:			#204a87
-!xterm*color5:			#ce5c00
-!xterm*color6:			#89b6e2
-!xterm*color7:			#cccccc
-!xterm*color8:			#555753
-!xterm*color9:			#ff8d8d
-!xterm*color10:			#c8e7a8
-!xterm*color11:			#ffc123
-!xterm*color12:			#3465a4
-!xterm*color13:			#f57900
-!xterm*color14:			#46a4ff
-!xterm*color15:			#ffffff

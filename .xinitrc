@@ -14,5 +14,8 @@ xset +fp /usr/local/lib/X11/fonts/terminus-font
 # Turn off console beep
 xset b off &
 
+# Use correct resolution
+xrandr -s 1920x1200 &
+
 # Start Window Manager
 exec spectrwm
