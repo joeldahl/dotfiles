@@ -17,5 +17,5 @@ xset b off &
 # Use correct resolution
 xrandr -s 1920x1200 &
 
-# Start Window Manager
-exec spectrwm
+# Start ssh-agent and my window manager
+exec ssh-agent spectrwm
