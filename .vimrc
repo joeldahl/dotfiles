@@ -5,6 +5,9 @@
 " Joel Dahl <joel@vnode.se>
 "
 
+" Prevent vim from emulating vi
+set nocompatible
+
 " Theme
 colorscheme hacktop
 
@@ -25,9 +28,6 @@ filetype plugin indent on
 
 " Syntax highlightning
 syntax on
-
-" Prevent vim from emulating vi
-set nocompatible
 
 " Highlight as I type a search phrase
 set incsearch
@@ -75,6 +75,9 @@ set shiftwidth=8
 
 " Prevents tabs from being automagically converted to spaces
 set noexpandtab
+
+" Scroll offset - number of lines visible above and below the cursor
+set scrolloff=4
 
 " C options for proper indenting - :help cinoptions-values
 set cinoptions=:0,t0,+4,(4
