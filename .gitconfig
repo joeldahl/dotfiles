@@ -1,0 +1,5 @@
+[user]
+        name = Joel Dahl
+        email = joel@vnode.se
+[push]
+	default = simple
