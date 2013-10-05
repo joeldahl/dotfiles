@@ -58,6 +58,12 @@ set ruler
 " Autoindent
 set autoindent
 
+" Number of spaces to use for each step of (auto)indent
+" Different indentation based on some common extensions
+autocmd FileType c,cpp setlocal shiftwidth=8
+autocmd FileType perl,sh,zsh,csh,tcsh setlocal shiftwidth=4
+autocmd FileType html,css setlocal shiftwidth=2
+
 " Do not show all characters
 set nolist
 
@@ -69,9 +75,6 @@ set textwidth=78
 
 " Number of spaces that a <Tab> in the file counts for
 set tabstop=8
-
-" Number of spaces to use for each step of (auto)indent
-set shiftwidth=8
 
 " Prevents tabs from being automagically converted to spaces
 set noexpandtab
@@ -105,6 +108,3 @@ if &term =~ "xterm.*"
 	map <expr> <Esc>[200~ XTermPasteBegin("i")
 	imap <expr> <Esc>[200~ XTermPasteBegin("")
 endif
-
-" Different indentation for some common extensions
-autocmd FileType html,htm,css setlocal shiftwidth=2
