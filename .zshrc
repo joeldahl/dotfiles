@@ -38,6 +38,9 @@ export LS_COLORS="di=33:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30
 zmodload -i zsh/complist
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
+# Needed for ..<TAB> to ../ completion
+zstyle ':completion:*' special-dirs true
+
 # Swedish characters
 export LC_CTYPE=sv_SE.UTF-8
 
