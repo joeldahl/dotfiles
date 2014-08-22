@@ -18,4 +18,5 @@ xset b off &
 #xrandr -s 1920x1200 &
 
 # Start ssh-agent and my window manager
-exec ssh-agent spectrwm
+#exec ssh-agent spectrwm
+exec ssh-agent dwm
