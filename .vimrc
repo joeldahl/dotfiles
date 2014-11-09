@@ -58,32 +58,25 @@ set ruler
 " Autoindent
 set autoindent
 
-" Number of spaces to use for each step of (auto)indent
-" Different indentation based on some common extensions
-autocmd FileType c,cpp setlocal shiftwidth=8
-autocmd FileType perl,sh,zsh,csh,tcsh setlocal shiftwidth=4
-autocmd FileType html,css setlocal shiftwidth=2
+" Different indentation based on some common file types
+autocmd FileType c,cpp setlocal sw=8 ts=8 noet
+autocmd FileType perl,sh,zsh,csh,tcsh setlocal sw=4 ts=8 sts=4 et 
+autocmd FileType html,css setlocal sw=2 ts=8 sts=2 et
+
+" C options for proper indenting - :help cinoptions-values
+set cinoptions=:0,t0,+4,(4
 
 " Do not show all characters
 set nolist
 
 " If I want all characters, show them like this
-set listchars=tab:>-,trail:-
+set listchars=tab:>>,trail:-
 
 " Automatically insert line breaks
 set textwidth=78
 
-" Number of spaces that a <Tab> in the file counts for
-set tabstop=8
-
-" Prevents tabs from being automagically converted to spaces
-set noexpandtab
-
 " Scroll offset - number of lines visible above and below the cursor
 set scrolloff=4
-
-" C options for proper indenting - :help cinoptions-values
-set cinoptions=:0,t0,+4,(4
 
 " Mouse support in xterm vim
 set mouse=a
@@ -94,6 +87,12 @@ map <xCSI>[62~ <MouseDown>
 " F11 to toggle paste mode
 map <F11> :set invpaste<CR>
 set pastetoggle=<F11>
+
+" Disable arrow keys
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
 
 " Enable smarter paste mode when $TERM is xterm
 " Helps a lot with pasting in vim
