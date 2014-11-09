@@ -60,8 +60,8 @@ set autoindent
 
 " Different indentation based on some common file types
 autocmd FileType c,cpp setlocal sw=8 ts=8 noet
-autocmd FileType perl,sh,zsh,csh,tcsh setlocal sw=4 ts=8 sts=4 et 
-autocmd FileType html,css setlocal sw=2 ts=8 sts=2 et
+autocmd FileType perl,sh,zsh,csh,tcsh setlocal sw=4 ts=8 sts=4 noet 
+autocmd FileType html,css setlocal sw=2 ts=8 sts=2 noet
 
 " C options for proper indenting - :help cinoptions-values
 set cinoptions=:0,t0,+4,(4
