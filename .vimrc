@@ -41,6 +41,7 @@ filetype plugin indent on
 autocmd FileType c,cpp setlocal sw=8 ts=8 noet
 autocmd FileType perl,sh,zsh,csh,tcsh setlocal sw=4 ts=8 sts=4 noet 
 autocmd FileType html,css setlocal sw=2 ts=8 sts=2 noet
+autocmd FileType python setlocal sw=4 ts=8 sts=4 et tw=79
 
 " Disable arrow keys
 noremap <Up> <NOP>
