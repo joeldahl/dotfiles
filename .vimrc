@@ -43,11 +43,15 @@ autocmd FileType perl,sh,zsh,csh,tcsh setlocal sw=4 ts=8 sts=4 noet
 autocmd FileType html,css setlocal sw=2 ts=8 sts=2 noet
 autocmd FileType python setlocal sw=4 ts=8 sts=4 et tw=79
 
-" Disable arrow keys
+" Disable certain keys
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+noremap <PageUp> <NOP>
+noremap <PageDown> <NOP>
+noremap <Home> <NOP>
+noremap <End> <NOP>
 
 " Enable smarter paste mode when $TERM is xterm
 " Helps a lot with pasting in vim
