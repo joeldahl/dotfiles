@@ -29,13 +29,14 @@ hi Error		ctermfg=1 ctermbg=NONE cterm=NONE
 hi Todo			ctermfg=5 ctermbg=NONE cterm=NONE
 
 " See :help highlight-groups
+hi ColorColumn		ctermfg=12 ctermbg=0 cterm=NONE
 hi Cursor		ctermfg=8 ctermbg=12 cterm=NONE
 hi CursorColumn		ctermfg=NONE ctermbg=0 cterm=NONE
 hi CursorLine		ctermfg=NONE ctermbg=0 cterm=NONE
 hi ErrorMsg		ctermfg=1 ctermbg=7 cterm=NONE
 hi IncSearch		ctermfg=9 ctermbg=7 cterm=NONE
 hi LineNr		ctermfg=14 ctermbg=0 cterm=NONE
-hi MatchParen		ctermfg=1 ctermbg=14 cterm=NONE
+hi MatchParen		ctermfg=8 ctermbg=14 cterm=NONE
 hi NonText		ctermfg=14 ctermbg=NONE cterm=NONE
 hi Search		ctermfg=3 ctermbg=7 cterm=NONE
 hi SpecialKey		ctermfg=14 ctermbg=0 cterm=NONE
