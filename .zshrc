@@ -25,7 +25,7 @@ setopt NO_BEEP
 
 # History - set size of the history file and make sure no duplicate
 # commands are saved.
-export HISTSIZE=5000 
+export HISTSIZE=8000
 export HISTFILE="$HOME/.history"
 export SAVEHIST=$HISTSIZE
 setopt HIST_IGNORE_ALL_DUPS
@@ -43,6 +43,9 @@ zstyle ':completion:*' special-dirs true
 
 # Swedish characters
 export LC_CTYPE=sv_SE.UTF-8
+
+# English messages
+export LC_MESSAGES=en_US.UTF-8
 
 # less > more
 export PAGER=less
