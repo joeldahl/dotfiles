@@ -12,6 +12,10 @@ compinit
 # My simple but effective prompt
 PROMPT="%n@%m [%~] "
 
+# Always present aliases
+alias h=history
+alias ls="ls -ahoGF"
+
 # Adjust completion to my liking
 setopt NO_AUTO_MENU
 setopt NO_ALWAYS_LAST_PROMPT
@@ -61,6 +65,6 @@ else
 	export EDITOR=vi
 fi
 
-# Load my aliases file if it exists
+# Load local aliases file if it exists
 [ -f .aliases ] && source .aliases
 
