@@ -22,7 +22,7 @@ set nohlsearch			" Do not highlight searched phrases
 set ignorecase			" Search is case-insensitive by default
 set smartcase			" Captial letters means case-sensitive search
 set noerrorbells		" No error bells
-set vb t_vb=			" No visual bell
+set visualbell t_vb=		" No visual bell
 set nobackup			" Do not make backups
 set history=1000		" Keep command line history
 set backspace=indent,eol,start	" Allow backspace to delete
